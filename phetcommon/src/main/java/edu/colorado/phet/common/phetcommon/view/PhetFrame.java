@@ -42,7 +42,6 @@ import edu.colorado.phet.common.phetcommon.view.menu.PhetFileMenu;
 import edu.colorado.phet.common.phetcommon.view.util.PhetOptionPane;
 import edu.colorado.phet.common.phetcommon.view.util.SwingUtils;
 
-import javax.swing.JApplet;
 import static edu.colorado.phet.common.phetcommon.simsharing.messages.ParameterKeys.height;
 import static edu.colorado.phet.common.phetcommon.simsharing.messages.ParameterKeys.width;
 import static edu.colorado.phet.common.phetcommon.simsharing.messages.UserComponentChain.chain;
@@ -54,7 +53,7 @@ import static edu.colorado.phet.common.phetcommon.simsharing.messages.UserCompon
  * @author ?
  * @version $Revision:14677 $
  */
-public class PhetFrame extends JApplet {
+public class PhetFrame extends JFrame {
 
     private PhetApplication application;
     private Container contentPanel;
@@ -73,40 +72,40 @@ public class PhetFrame extends JApplet {
      * @param application the application that own the PhetFrame
      */
     public PhetFrame( final PhetApplication application ) throws HeadlessException {
-        //super( application.getSimInfo().getName() + " (" + application.getSimInfo().getVersion().formatForTitleBar() + ")" );
+        super( application.getSimInfo().getName() + " (" + application.getSimInfo().getVersion().formatForTitleBar() + ")" );
         this.application = application;
 
-//        addWindowListener( new WindowAdapter() {
-//            public void windowClosing( WindowEvent e ) {
-//
-//                SimSharingManager.sendSystemMessage( SystemComponents.phetFrame, SystemComponentTypes.window, SystemActions.windowClosing );
-//                application.exit();
-//            }
-//        } );
-//        this.addWindowListener( new WindowAdapter() {
-//
-//            // Pause the clock if the simulation window is iconified.
-//            public void windowIconified( WindowEvent e ) {
-//
-//                SimSharingManager.sendSystemMessage( SystemComponents.phetFrame, SystemComponentTypes.window, SystemActions.iconified );
-//                application.pause();
-//            }
-//
-//            // Restore the clock state if the simulation window is deiconified.
-//            public void windowDeiconified( WindowEvent e ) {
-//
-//                SimSharingManager.sendSystemMessage( SystemComponents.phetFrame, SystemComponentTypes.window, SystemActions.deiconified );
-//                application.resume();
-//            }
-//
-//            @Override public void windowActivated( WindowEvent e ) {
-//                SimSharingManager.sendSystemMessage( SystemComponents.phetFrame, SystemComponentTypes.window, SystemActions.activated );
-//            }
-//
-//            @Override public void windowDeactivated( WindowEvent e ) {
-//                SimSharingManager.sendSystemMessage( SystemComponents.phetFrame, SystemComponentTypes.window, SystemActions.deactivated );
-//            }
-//        } );
+        addWindowListener( new WindowAdapter() {
+            public void windowClosing( WindowEvent e ) {
+
+                SimSharingManager.sendSystemMessage( SystemComponents.phetFrame, SystemComponentTypes.window, SystemActions.windowClosing );
+                application.exit();
+            }
+        } );
+        this.addWindowListener( new WindowAdapter() {
+
+            // Pause the clock if the simulation window is iconified.
+            public void windowIconified( WindowEvent e ) {
+
+                SimSharingManager.sendSystemMessage( SystemComponents.phetFrame, SystemComponentTypes.window, SystemActions.iconified );
+                application.pause();
+            }
+
+            // Restore the clock state if the simulation window is deiconified.
+            public void windowDeiconified( WindowEvent e ) {
+
+                SimSharingManager.sendSystemMessage( SystemComponents.phetFrame, SystemComponentTypes.window, SystemActions.deiconified );
+                application.resume();
+            }
+
+            @Override public void windowActivated( WindowEvent e ) {
+                SimSharingManager.sendSystemMessage( SystemComponents.phetFrame, SystemComponentTypes.window, SystemActions.activated );
+            }
+
+            @Override public void windowDeactivated( WindowEvent e ) {
+                SimSharingManager.sendSystemMessage( SystemComponents.phetFrame, SystemComponentTypes.window, SystemActions.deactivated );
+            }
+        } );
 
         //Send an event when the window resizes.  This will tell us the initial size and whenever the user changes the size.
         //The initial size is valuable so we know how many students are running at less than 1024x768
