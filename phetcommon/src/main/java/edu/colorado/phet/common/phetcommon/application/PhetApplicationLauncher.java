@@ -2,21 +2,9 @@
 package edu.colorado.phet.common.phetcommon.application;
 
 import java.awt.Frame;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
 import java.lang.reflect.InvocationTargetException;
 
-import javax.swing.JSpinner;
-import javax.swing.JWindow;
 import javax.swing.SwingUtilities;
-
-import edu.colorado.phet.common.phetcommon.simsharing.SimSharingManager;
-import edu.colorado.phet.common.phetcommon.sponsorship.SponsorDialog;
-import edu.colorado.phet.common.phetcommon.sponsorship.SponsorMenuItem;
-import edu.colorado.phet.common.phetcommon.statistics.StatisticsManager;
-import edu.colorado.phet.common.phetcommon.updates.AutomaticUpdatesManager;
-import edu.colorado.phet.common.phetcommon.updates.ManualUpdatesManager;
-import edu.colorado.phet.common.phetcommon.util.function.VoidFunction0;
 
 /**
  * This launcher solves the following problems:
@@ -92,10 +80,6 @@ public class PhetApplicationLauncher {
 
     public void launchSim( final PhetApplicationConfig config, final ApplicationConstructor applicationConstructor ) {
 
-        //Initializes the sim-sharing subsystem.
-        //Nothing happens unless the "-study" flag is provided on the command line
-        SimSharingManager.init( config );
-
         /*
          * Wrap the body of main in invokeAndWait, so that all initialization occurs
          * in the event dispatch thread. Sun now recommends doing all Swing init in
@@ -114,9 +98,6 @@ public class PhetApplicationLauncher {
                 public void run() {
 
                     config.getLookAndFeel().initLookAndFeel();
-
-                    new JSpinner(); // WORKAROUND for Unfuddle #1372 (Apple bug #6710919)
-
                     if ( applicationConstructor != null ) {
 
                         // sim initialization
