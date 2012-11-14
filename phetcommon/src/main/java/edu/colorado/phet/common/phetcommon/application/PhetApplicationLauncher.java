@@ -124,41 +124,7 @@ public class PhetApplicationLauncher {
                         final PhetApplication app = applicationConstructor.getApplication( config );
                         app.startApplication();
                         //disposeSplashWindow();
-
-                        // Function for displaying Sponsor dialog and adding Sponsor menu item.
-                        final VoidFunction0 sponsorFunction = new VoidFunction0() {
-                            public void apply() {
-                                if ( SponsorDialog.shouldShow( config ) ) {
-                                    SponsorDialog.show( config, app.getPhetFrame(), true /* startDisposeTimer */ );
-                                    app.getPhetFrame().getHelpMenu().add( new SponsorMenuItem( config, app.getPhetFrame() ) );
-                                }
-                            }
-                        };
-
-                        // Display KSU Credits window, followed by Sponsor dialog (both optional)
-                        if ( KSUCreditsWindow.shouldShow( config ) ) {
-                            JWindow window = KSUCreditsWindow.show( app.getPhetFrame() );
-                            // wait until KSU Credits window is closed before calling sponsor function
-                            window.addWindowListener( new WindowAdapter() {
-                                @Override public void windowClosed( WindowEvent e ) {
-                                    sponsorFunction.apply();
-                                }
-                            } );
-                        }
-                        else {
-                            // No KSU Credits window, call sponsor function
-                            sponsorFunction.apply();
-                        }
-
-                        //Ignore statistics and updates for sims that are still under development
-                        if ( app.getSimInfo().getVersion().getMajorAsInt() >= 1 ) {
-                            // statistics
-                            StatisticsManager.initInstance( app ).start();
-
-                            // updates
-                            AutomaticUpdatesManager.initInstance( app ).start();
-                            ManualUpdatesManager.initInstance( app );
-                        }
+                        
                     }
                     else {
                         new RuntimeException( "No applicationconstructor specified" ).printStackTrace();
