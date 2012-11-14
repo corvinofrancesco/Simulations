@@ -2,7 +2,6 @@
 
 package edu.colorado.phet.common.phetcommon.view.util;
 
-import edu.colorado.phet.common.phetcommon.view.PhetApplet;
 import java.awt.HeadlessException;
 import java.awt.Insets;
 import java.awt.Rectangle;
@@ -26,7 +25,7 @@ import static java.awt.Toolkit.getDefaultToolkit;
  * @author Sam Reid
  */
 public interface FrameSetup {
-    public void initialize( PhetApplet frame );
+    public void initialize( JFrame frame );
 
     public static class CenteredWithSize implements FrameSetup {
         private int frameWidth;
@@ -83,7 +82,7 @@ public interface FrameSetup {
             return new Rectangle( getInsets().left, getInsets().top, getAvailableWidth(), getAvailableHeight() );
         }
 
-        public void initialize( PhetApplet frame ) {
+        public void initialize( JFrame frame ) {
             //Center in available region
             frame.setLocation( (int) getAvailableRectangle().getCenterX() - frameWidth / 2,
                                (int) getAvailableRectangle().getCenterY() - frameHeight / 2 );
