@@ -42,6 +42,7 @@ import edu.colorado.phet.common.phetcommon.view.menu.PhetFileMenu;
 import edu.colorado.phet.common.phetcommon.view.util.PhetOptionPane;
 import edu.colorado.phet.common.phetcommon.view.util.SwingUtils;
 
+import javax.swing.JApplet;
 import static edu.colorado.phet.common.phetcommon.simsharing.messages.ParameterKeys.height;
 import static edu.colorado.phet.common.phetcommon.simsharing.messages.ParameterKeys.width;
 import static edu.colorado.phet.common.phetcommon.simsharing.messages.UserComponentChain.chain;
@@ -53,7 +54,8 @@ import static edu.colorado.phet.common.phetcommon.simsharing.messages.UserCompon
  * @author ?
  * @version $Revision:14677 $
  */
-public class PhetFrame extends JFrame {
+public class PhetFrame extends PhetApplet {
+//public class PhetFrame extends JFrame {
 
     private PhetApplication application;
     private Container contentPanel;
@@ -65,7 +67,7 @@ public class PhetFrame extends JFrame {
 
     //Store the previous size in component listener so we only notify about changes
     private Dimension prevSize = new Dimension( -1, -1 );
-
+    
     /**
      * Constructs a PhetFrame for the specified PhetApplication.
      *
