@@ -120,10 +120,10 @@ public class PhetApplicationLauncher {
                     if ( applicationConstructor != null ) {
 
                         // sim initialization
-                        showSplashWindow( config.getName() );
+                        //showSplashWindow( config.getName() );
                         final PhetApplication app = applicationConstructor.getApplication( config );
                         app.startApplication();
-                        disposeSplashWindow();
+                        //disposeSplashWindow();
 
                         // Function for displaying Sponsor dialog and adding Sponsor menu item.
                         final VoidFunction0 sponsorFunction = new VoidFunction0() {
