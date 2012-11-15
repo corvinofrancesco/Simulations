@@ -18,6 +18,7 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.net.URL;
 
+import java.util.HashMap;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 
@@ -28,7 +29,20 @@ public class ImageLoader {
     /**
      * A convenience instance, public for customization.
      */
-    public static final ImageLoader instance = new CachingImageLoader();
+    public static final ImageLoader instance = new ImageLoader(){
+        HashMap buffer = new HashMap();
+
+        public BufferedImage loadImage( String image ) throws IOException {
+            if ( buffer.containsKey( image ) ) {
+                return (BufferedImage) buffer.get( image );
+            }
+            else {
+                BufferedImage imageLoad = super.loadImage( image );
+                buffer.put( image, imageLoad );
+                return imageLoad;
+            }
+        }        
+    };
 
     /**
      * Convenience method, uses the static instance to load a buffered image.
