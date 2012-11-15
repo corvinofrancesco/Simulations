@@ -1,6 +1,7 @@
 // Copyright 2002-2011, University of Colorado
 package edu.colorado.phet.common.phetcommon.view.util;
 
+import edu.colorado.phet.common.phetcommon.resources.StringUtil;
 import junit.framework.TestCase;
 
 /**

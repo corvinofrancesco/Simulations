@@ -12,7 +12,7 @@ import edu.colorado.phet.common.phetcommon.util.DeploymentScenario;
 import edu.colorado.phet.common.phetcommon.util.logging.LoggingUtils;
 import edu.colorado.phet.common.phetcommon.view.PhetLookAndFeel;
 import edu.colorado.phet.common.phetcommon.view.util.FrameSetup;
-import edu.colorado.phet.common.phetcommon.view.util.StringUtil;
+import edu.colorado.phet.common.phetcommon.resources.StringUtil;
 
 /**
  * PhetApplicationConfig encapsulates the information required to configure

@@ -8,8 +8,9 @@
  * Revision : $Revision: 54200 $
  * Date modified : $Date: 2011-07-19 02:45:40 +0200 (mar, 19 lug 2011) $
  */
-package edu.colorado.phet.common.phetcommon.view.util;
+package edu.colorado.phet.common.phetcommon.resources;
 
+import edu.colorado.phet.common.phetcommon.view.util.BufferedImageUtils;
 import java.awt.Container;
 import java.awt.Image;
 import java.awt.MediaTracker;

@@ -8,7 +8,7 @@
  * Revision : $Revision: 47760 $
  * Date modified : $Date: 2011-01-07 18:42:54 +0100 (ven, 07 gen 2011) $
  */
-package edu.colorado.phet.common.phetcommon.view.util;
+package edu.colorado.phet.common.phetcommon.resources;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;

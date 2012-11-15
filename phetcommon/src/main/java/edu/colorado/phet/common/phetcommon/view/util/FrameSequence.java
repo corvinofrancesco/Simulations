@@ -10,6 +10,7 @@
  */
 package edu.colorado.phet.common.phetcommon.view.util;
 
+import edu.colorado.phet.common.phetcommon.resources.ImageLoader;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.IOException;

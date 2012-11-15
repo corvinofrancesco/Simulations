@@ -22,7 +22,7 @@ import edu.colorado.phet.common.phetcommon.application.PaintImmediateDialog;
 import edu.colorado.phet.common.phetcommon.resources.PhetCommonResources;
 import edu.colorado.phet.common.phetcommon.view.util.HTMLUtils;
 import edu.colorado.phet.common.phetcommon.view.util.HTMLUtils.InteractiveHTMLPane;
-import edu.colorado.phet.common.phetcommon.view.util.StringUtil;
+import edu.colorado.phet.common.phetcommon.resources.StringUtil;
 
 /**
  * StackTraceDialog is a dialog that displays a stack trace.

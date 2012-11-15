@@ -5,7 +5,6 @@ import java.util.Properties;
 import java.util.logging.Logger;
 
 import edu.colorado.phet.common.phetcommon.util.logging.LoggingUtils;
-import edu.colorado.phet.common.phetcommon.view.util.StringUtil;
 
 /**
  * An extension of Properties that provides some convenience methods.

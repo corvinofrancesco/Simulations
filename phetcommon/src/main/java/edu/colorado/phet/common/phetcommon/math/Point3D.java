@@ -3,7 +3,7 @@
 package edu.colorado.phet.common.phetcommon.math;
 
 
-import edu.colorado.phet.common.phetcommon.view.util.StringUtil;
+import edu.colorado.phet.common.phetcommon.resources.StringUtil;
 
 /**
  * Point3D is a point in 3 dimensional space.
