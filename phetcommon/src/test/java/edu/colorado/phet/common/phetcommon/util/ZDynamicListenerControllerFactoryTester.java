@@ -1,6 +1,8 @@
 // Copyright 2002-2011, University of Colorado
 package edu.colorado.phet.common.phetcommon.util;
 
+import edu.colorado.phet.common.phetcommon.util.DynamicListenerController;
+import edu.colorado.phet.common.phetcommon.util.DynamicListenerControllerFactory;
 import junit.framework.TestCase;
 
 import java.util.Stack;

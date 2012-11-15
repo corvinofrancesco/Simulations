@@ -1,6 +1,8 @@
 // Copyright 2002-2011, University of Colorado
 package edu.colorado.phet.common.phetcommon.util;
 
+import edu.colorado.phet.common.phetcommon.util.SimpleObservable;
+import edu.colorado.phet.common.phetcommon.util.SimpleObserver;
 import junit.framework.TestCase;
 
 public class ZSimpleObservableTester extends TestCase {
