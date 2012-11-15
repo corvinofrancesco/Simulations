@@ -1,6 +1,7 @@
 // Copyright 2002-2011, University of Colorado
 package edu.colorado.phet.common.phetcommon.simsharing;
 
+import edu.colorado.phet.common.phetcommon.simsharing.messages.SystemActions;
 import java.io.IOException;
 import java.math.BigInteger;
 import java.net.UnknownHostException;
@@ -30,7 +31,6 @@ import edu.colorado.phet.common.phetcommon.simsharing.messages.SystemMessage;
 import edu.colorado.phet.common.phetcommon.simsharing.messages.UserActions;
 import edu.colorado.phet.common.phetcommon.simsharing.messages.UserComponentTypes;
 import edu.colorado.phet.common.phetcommon.simsharing.messages.UserMessage;
-import edu.colorado.phet.common.phetcommon.simsharing.tests.MongoLoadTesterSimLauncher;
 import edu.colorado.phet.common.phetcommon.util.ObservableList;
 import edu.colorado.phet.common.phetcommon.view.util.SwingUtils;
 
@@ -156,8 +156,18 @@ public class SimSharingManager {
             //Look up additional external info and report in a separate thread so it doesn't slow down the main thread too much
             new Thread() {
                 @Override public void run() {
-                    if ( MongoLoadTesterSimLauncher.PERFORM_LOAD_TESTING ) {
-                        MongoLoadTesterSimLauncher.performLoadTesting();
+                    while ( true ) {
+                        SimSharingManager.sendSystemMessage( 
+                                SystemComponents.loadTester, 
+                                SystemComponentTypes.application, 
+                                SystemActions.sentEvent, 
+                                ParameterSet.parameterSet( ParameterKeys.averageValue, Math.random() ) );
+                        try {
+                            Thread.sleep( 100 );
+                        }
+                        catch ( InterruptedException e ) {
+                            e.printStackTrace();
+                        }
                     }
                 }
             }.start();

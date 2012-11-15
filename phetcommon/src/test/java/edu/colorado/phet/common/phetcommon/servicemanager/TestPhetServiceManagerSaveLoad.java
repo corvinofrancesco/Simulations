@@ -1,5 +1,5 @@
 // Copyright 2002-2011, University of Colorado
-package edu.colorado.phet.common.phetcommon.servicemanager.test;
+package edu.colorado.phet.common.phetcommon.servicemanager;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

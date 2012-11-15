@@ -1,5 +1,5 @@
 // Copyright 2002-2011, University of Colorado
-package edu.colorado.phet.common.phetcommon.servicemanager.test;
+package edu.colorado.phet.common.phetcommon.servicemanager;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -7,8 +7,6 @@ import java.net.URL;
 import javax.jnlp.BasicService;
 import javax.jnlp.ServiceManager;
 import javax.jnlp.UnavailableServiceException;
-
-import edu.colorado.phet.common.phetcommon.servicemanager.PhetServiceManager;
 
 /**
  * User: Sam Reid

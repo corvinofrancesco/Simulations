@@ -1,5 +1,5 @@
 // Copyright 2002-2012, University of Colorado
-package edu.colorado.phet.common.phetcommon.simsharing.tests;
+package edu.colorado.phet.common.phetcommon.simsharing;
 
 import java.net.UnknownHostException;
 import java.util.ArrayList;

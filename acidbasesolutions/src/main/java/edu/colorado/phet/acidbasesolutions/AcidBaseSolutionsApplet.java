@@ -7,7 +7,6 @@ package edu.colorado.phet.acidbasesolutions;
 import edu.colorado.phet.acidbasesolutions.constants.ABSConstants;
 import edu.colorado.phet.common.phetcommon.application.PhetApplication;
 import edu.colorado.phet.common.phetcommon.application.PhetApplicationConfig;
-import edu.colorado.phet.common.phetcommon.application.PhetApplicationLauncher;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.lang.reflect.InvocationTargetException;
@@ -33,7 +32,7 @@ public class AcidBaseSolutionsApplet extends JApplet implements ActionListener {
     
     private JFrame launchSim(){
         PhetApplicationConfig config = 
-                new PhetApplicationConfig( new String[2], ABSConstants.PROJECT, "" );
+                new PhetApplicationConfig( new String[]{"",""}, ABSConstants.PROJECT, "" );
         config.getLookAndFeel().initLookAndFeel();
 
         final PhetApplication app = new AcidBaseSolutionsApplication(null);
