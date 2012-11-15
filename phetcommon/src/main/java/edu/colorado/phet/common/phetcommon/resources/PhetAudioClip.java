@@ -1,5 +1,5 @@
 // Copyright 2002-2012, University of Colorado
-package edu.colorado.phet.common.phetcommon.audio;
+package edu.colorado.phet.common.phetcommon.resources;
 
 import java.io.BufferedInputStream;
 import java.io.IOException;

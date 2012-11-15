@@ -12,7 +12,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import edu.colorado.phet.common.phetcommon.PhetCommonConstants;
-import edu.colorado.phet.common.phetcommon.audio.PhetAudioClip;
 import edu.colorado.phet.common.phetcommon.util.logging.LoggingUtils;
 
 /**
