@@ -17,7 +17,7 @@ import edu.colorado.phet.common.phetcommon.application.ISimInfo;
 import edu.colorado.phet.common.phetcommon.application.PhetApplication;
 import edu.colorado.phet.common.phetcommon.dialogs.DownloadProgressDialog;
 import edu.colorado.phet.common.phetcommon.dialogs.ErrorDialog;
-import edu.colorado.phet.common.phetcommon.files.PhetInstallation;
+import edu.colorado.phet.common.phetcommon.util.PhetInstallation;
 import edu.colorado.phet.common.phetcommon.resources.PhetCommonResources;
 import edu.colorado.phet.common.phetcommon.resources.PhetVersion;
 import edu.colorado.phet.common.phetcommon.util.DeploymentScenario;

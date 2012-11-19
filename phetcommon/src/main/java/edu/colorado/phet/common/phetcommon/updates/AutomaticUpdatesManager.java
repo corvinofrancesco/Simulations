@@ -13,7 +13,7 @@ import edu.colorado.phet.common.phetcommon.application.VersionInfoQuery;
 import edu.colorado.phet.common.phetcommon.application.VersionInfoQuery.InstallerResponse;
 import edu.colorado.phet.common.phetcommon.application.VersionInfoQuery.Response;
 import edu.colorado.phet.common.phetcommon.application.VersionInfoQuery.SimResponse;
-import edu.colorado.phet.common.phetcommon.files.PhetInstallation;
+import edu.colorado.phet.common.phetcommon.util.PhetInstallation;
 import edu.colorado.phet.common.phetcommon.resources.PhetInstallerVersion;
 import edu.colorado.phet.common.phetcommon.resources.PhetVersion;
 import edu.colorado.phet.common.phetcommon.util.DeploymentScenario;

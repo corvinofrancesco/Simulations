@@ -1,5 +1,5 @@
 // Copyright 2002-2011, University of Colorado
-package edu.colorado.phet.common.phetcommon.files;
+package edu.colorado.phet.common.phetcommon.util;
 
 import java.io.File;
 import java.io.FileInputStream;
