@@ -10,7 +10,7 @@
  */
 package edu.colorado.phet.common.phetcommon.model;
 
-import java.util.Vector;
+import java.util.ArrayList;
 
 /**
  * A synchronized list of Commands to be executed in the BaseModel's update.
@@ -19,7 +19,7 @@ import java.util.Vector;
  * @version $Revision: 47760 $
  */
 public class CommandQueue implements Command {
-    private Vector al = new Vector();
+    private ArrayList al = new ArrayList();
 
     public int size() {
         return al.size();

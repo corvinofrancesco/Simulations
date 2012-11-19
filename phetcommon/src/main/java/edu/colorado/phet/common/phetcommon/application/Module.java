@@ -38,7 +38,7 @@ import edu.colorado.phet.common.phetcommon.view.util.SwingUtils;
  * It entails graphics, controls and a model.
  */
 
-public abstract class Module implements Resettable {
+public abstract class Module {
 
     //----------------------------------------------------------------------------
     // Instance data

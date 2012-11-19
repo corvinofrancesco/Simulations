@@ -1,7 +1,8 @@
 // Copyright 2002-2011, University of Colorado
 
-package edu.colorado.phet.common.phetcommon.application;
+package edu.colorado.phet.common.phetcommon.application.deprecate;
 
+import edu.colorado.phet.common.phetcommon.application.PhetApplicationConfig;
 import java.awt.Color;
 import java.awt.Frame;
 import java.awt.event.ActionEvent;
