@@ -16,8 +16,6 @@ import edu.colorado.phet.common.phetcommon.application.VersionInfoQuery.SimRespo
 import edu.colorado.phet.common.phetcommon.files.PhetInstallation;
 import edu.colorado.phet.common.phetcommon.resources.PhetInstallerVersion;
 import edu.colorado.phet.common.phetcommon.resources.PhetVersion;
-import edu.colorado.phet.common.phetcommon.updates.dialogs.InstallerAutomaticUpdateDialog;
-import edu.colorado.phet.common.phetcommon.updates.dialogs.SimAutomaticUpdateDialog;
 import edu.colorado.phet.common.phetcommon.util.DeploymentScenario;
 
 /**

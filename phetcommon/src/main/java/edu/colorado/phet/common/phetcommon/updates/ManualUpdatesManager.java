@@ -19,11 +19,8 @@ import edu.colorado.phet.common.phetcommon.dialogs.ErrorDialog;
 import edu.colorado.phet.common.phetcommon.files.PhetInstallation;
 import edu.colorado.phet.common.phetcommon.resources.PhetCommonResources;
 import edu.colorado.phet.common.phetcommon.resources.PhetInstallerVersion;
-import edu.colorado.phet.common.phetcommon.updates.dialogs.InstallerManualUpdateDialog;
-import edu.colorado.phet.common.phetcommon.updates.dialogs.NoUpdateDialog.InstallerNoUpdateDialog;
-import edu.colorado.phet.common.phetcommon.updates.dialogs.NoUpdateDialog.SimNoUpdateDialog;
-import edu.colorado.phet.common.phetcommon.updates.dialogs.SimManualUpdateDialog;
-import edu.colorado.phet.common.phetcommon.updates.dialogs.UpdateErrorDialog;
+import edu.colorado.phet.common.phetcommon.updates.NoUpdateDialog.InstallerNoUpdateDialog;
+import edu.colorado.phet.common.phetcommon.updates.NoUpdateDialog.SimNoUpdateDialog;
 
 /**
  * Handles manual requests for update checks.
